@@ -1,13 +1,6 @@
-import * as _ from 'lodash'
+const character = ' mario'
+console.log(character)
 
+const inputs = document.querySelectorAll('input')
 
-
-async function hello(){
-    return "world"
-}
-
-
-
-let lucky;
-
-lucky = '23'
+console.log(inputs)
