@@ -10,3 +10,15 @@ inputs.forEach(input =>{
 
 let age = 30 
 let isBlackBelt = false
+
+
+const circ = (diameter: number)=>{
+ return diameter * Math.PI;
+}
+
+console.log(circ(7.5))
+
+let names = ['shorena', 'maka', 'teo', 'maria']
+names.push('toad')
+names.push(3)
+
