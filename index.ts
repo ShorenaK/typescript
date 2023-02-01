@@ -1,5 +1,5 @@
-const character = ' mario'
-console.log(character)
+// const character = ' mario'
+// console.log(character)
 
 const inputs = document.querySelectorAll('input')
 
@@ -8,7 +8,7 @@ inputs.forEach(input =>{
     console.log(input)
 })
 
-let age = 30 
+// let age = 30 
 let isBlackBelt = false
 
 
@@ -20,5 +20,22 @@ console.log(circ(7.5))
 
 let names = ['shorena', 'maka', 'teo', 'maria']
 names.push('toad')
-names.push(3)
 
+
+let character: string; 
+let age: number;
+let isLoggedIn: boolean; 
+let ninjas: string[]= [];
+
+ninjas.push('shaun')
+
+console.log(ninjas)
+
+// union types 
+
+let mix: (string|number|boolean)[] =[]
+// objects
+mix.push('hello')
+mix.push(20)
+mix.push(false)
+console.log(mix)
