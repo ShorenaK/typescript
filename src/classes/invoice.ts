@@ -3,7 +3,7 @@ import {HasFormatter} from '../interfaces/HasFormatter.js'
 
 
 //classes
-export class Invoice {
+export class Invoice implements  HasFormatter{
     client: string; 
     detailes: string; 
     amount: number; 
