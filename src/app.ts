@@ -1,8 +1,7 @@
 import { Invoice } from './classes/invoice.js';
+import { ListTemplate } from './classes/ListTemplate.js';
 import { Payment } from './classes/Payment.js';
 import { HasFormatter } from './interfaces/HasFormatter.js'
-
-
 let docOne: HasFormatter;
 let docTwo: HasFormatter;
 
@@ -13,8 +12,6 @@ let docs: HasFormatter[] =[]
 
 docs.push(docOne)
 docs.push(docTwo)
-
-console.log(docs)
 
 // interfaces 
 interface isPerson {
@@ -35,13 +32,15 @@ const me: isPerson = {
         return amount
      }
 }
-console.log(me)
+
 
 const greetPerson = (person: isPerson)=>{
     console.log("Hello", person.name)
 }
 greetPerson(me)
 
+const ul = document.querySelector('ul')!;
+const list = new ListTemplate(ul);
 // const form = document.querySelector('form')!;
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
@@ -64,7 +63,7 @@ form.addEventListener('submit', (e: Event)=>{
     }else{
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
     }
-    console.log(doc)
+  list.render(doc, type.value, 'end')
 })
 
 
@@ -87,3 +86,32 @@ console.log(inv.client,
      inv.amount, 
      inv.format())
 })
+
+const addUID = <T extends object >(obj: T)=>{
+let uid = Math.floor(Math.random() * 100)
+return{...obj, uid}
+}
+
+let docOne1 = addUID({name: 'shorena', age: 47})
+// let docOne2 = addUID('hello')
+
+console.log(docOne1.name)
+
+// with interfaces
+interface Resource <T>{
+    uid: number; 
+    resourceName: string; 
+    data: T;
+}
+
+const docThree: Resource<object>={
+     uid: 1, 
+     resourceName: 'person', 
+     data: {name: 'shorena'}
+}
+
+const docFour: Resource<string[]>={
+     uid: 2, 
+     resourceName: 'person', 
+     data: ['shorena', 'milk']
+}

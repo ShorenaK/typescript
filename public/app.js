@@ -1,4 +1,5 @@
 import { Invoice } from './classes/invoice.js';
+import { ListTemplate } from './classes/ListTemplate.js';
 import { Payment } from './classes/Payment.js';
 let docOne;
 let docTwo;
@@ -7,7 +8,6 @@ docTwo = new Payment('dima', 'pluming work', 1000);
 let docs = [];
 docs.push(docOne);
 docs.push(docTwo);
-console.log(docs);
 const me = {
     name: 'shorena',
     age: 47,
@@ -19,11 +19,12 @@ const me = {
         return amount;
     }
 };
-console.log(me);
 const greetPerson = (person) => {
     console.log("Hello", person.name);
 };
 greetPerson(me);
+const ul = document.querySelector('ul');
+const list = new ListTemplate(ul);
 // const form = document.querySelector('form')!;
 const form = document.querySelector('.new-item-form');
 //console.log(form.children);
@@ -41,7 +42,7 @@ form.addEventListener('submit', (e) => {
     else {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
     }
-    console.log(doc);
+    list.render(doc, type.value, 'end');
 });
 const invOne = new Invoice('shorena', 'works on the website', 300);
 const invTwo = new Invoice('teo', 'works on the website', 350);
@@ -56,3 +57,9 @@ invTwo.amount = 600;
 Invoices.forEach((inv) => {
     console.log(inv.client, inv.detailes, inv.amount, inv.format());
 });
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docOne1 = addUID({ name: 'shorena', age: 47 });
+console.log(docOne1);
