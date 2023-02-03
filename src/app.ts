@@ -41,5 +41,10 @@ format(){
 }
 
 const invOne = new Invoice('shorena', 'works on the website', 300)
-const invTwo = new Invoice('tee', 'works on the website', 350)
-console.log(invOne, invTwo)
+const invTwo = new Invoice('teo', 'works on the website', 350)
+// console.log(invOne, invTwo)
+
+let Invoices: Invoice[]=[]
+Invoices.push(invOne)
+Invoices.push(invTwo)
+console.log(Invoices)

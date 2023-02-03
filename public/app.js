@@ -16,3 +16,21 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
+//classes
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.detailes = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.detailes}`;
+    }
+}
+const invOne = new Invoice('shorena', 'works on the website', 300);
+const invTwo = new Invoice('teo', 'works on the website', 350);
+// console.log(invOne, invTwo)
+let Invoices = [];
+Invoices.push(invOne);
+Invoices.push(invTwo);
+console.log(Invoices);
