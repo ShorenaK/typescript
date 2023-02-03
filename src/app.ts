@@ -17,6 +17,13 @@ const me: isPerson = {
         return amount
      }
 }
+console.log(me)
+
+const greetPerson = (person: isPerson)=>{
+    console.log("Hello", person.name)
+}
+greetPerson(me)
+
 // const form = document.querySelector('form')!;
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;

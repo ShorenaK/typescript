@@ -1,10 +1,23 @@
-// const anchor = document.querySelector('a')!
-// if(anchor){
-// console.log(anchor.href)
-// }
-// console.log(anchor.href)
+const me = {
+    name: 'shorena',
+    age: 47,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
+    }
+};
+console.log(me);
+const greetPerson = (person) => {
+    console.log("Hello", person.name);
+};
+greetPerson(me);
 // const form = document.querySelector('form')!;
 const form = document.querySelector('.new-item-form');
+//console.log(form.children);
+import { Invoice } from './classes/invoice.js';
 // inputs 
 const type = document.querySelector('#type');
 const tofrom = document.querySelector('#tofrom');
@@ -27,4 +40,3 @@ invTwo.amount = 600;
 Invoices.forEach((inv) => {
     console.log(inv.client, inv.detailes, inv.amount, inv.format());
 });
-export {};
