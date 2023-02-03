@@ -25,3 +25,21 @@ form.addEventListener('submit', (e: Event)=>{
         amount.valueAsNumber
     )
 })
+//classes
+class Invoice {
+    client: string; 
+    detailes: string; 
+    amount: number; 
+    constructor(c: string, d: string, a: number){
+        this.client = c; 
+        this.detailes = d; 
+        this.amount = a;
+    }
+format(){
+    return `${this.client} owes $${this.amount} for ${this.detailes}`
+}
+}
+
+const invOne = new Invoice('shorena', 'works on the website', 300)
+const invTwo = new Invoice('tee', 'works on the website', 350)
+console.log(invOne, invTwo)
