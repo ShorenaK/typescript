@@ -1,3 +1,13 @@
+import { Invoice } from './classes/invoice.js';
+import { Payment } from './classes/Payment.js';
+let docOne;
+let docTwo;
+docOne = new Invoice('shorena', 'web work', 1000);
+docTwo = new Payment('dima', 'pluming work', 1000);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
 const me = {
     name: 'shorena',
     age: 47,
@@ -17,7 +27,6 @@ greetPerson(me);
 // const form = document.querySelector('form')!;
 const form = document.querySelector('.new-item-form');
 //console.log(form.children);
-import { Invoice } from './classes/invoice.js';
 // inputs 
 const type = document.querySelector('#type');
 const tofrom = document.querySelector('#tofrom');
@@ -25,7 +34,14 @@ const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+    let doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });
 const invOne = new Invoice('shorena', 'works on the website', 300);
 const invTwo = new Invoice('teo', 'works on the website', 350);
