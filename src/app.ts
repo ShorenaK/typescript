@@ -1,3 +1,21 @@
+import { Invoice } from './classes/invoice.js';
+import { Payment } from './classes/Payment.js';
+import { HasFormatter } from './interfaces/HasFormatter'
+
+
+let docOne: HasFormatter;
+let docTwo: HasFormatter;
+
+docOne = new Invoice('shorena', 'web work', 1000)
+docTwo = new Payment('dima', 'pluming work', 1000)
+
+let docs: HasFormatter[] =[]
+
+docs.push(docOne)
+docs.push(docTwo)
+
+console.log(docs)
+
 // interfaces 
 interface isPerson {
     name: string;
@@ -29,7 +47,7 @@ greetPerson(me)
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 //console.log(form.children);
 
-import {Invoice} from './classes/invoice.js'
+
 
 // inputs 
 const type = document.querySelector('#type') as HTMLSelectElement
