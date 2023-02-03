@@ -22,6 +22,6 @@ form.addEventListener('submit', (e: Event)=>{
         type.value, 
         tofrom.value, 
         details.value, 
-        amount.value
+        amount.valueAsNumber
     )
 })
