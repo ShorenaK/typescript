@@ -48,3 +48,10 @@ let Invoices: Invoice[]=[]
 Invoices.push(invOne)
 Invoices.push(invTwo)
 console.log(Invoices)
+
+invOne.client = 'Dima'
+invTwo.amount = 600 
+// console.log(invOne, invTwo)
+Invoices.forEach((inv)=>{
+console.log(inv.client, inv.detailes, inv.amount, inv.format())
+})
