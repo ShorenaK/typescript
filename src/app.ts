@@ -115,3 +115,24 @@ const docFour: Resource<string[]>={
      resourceName: 'person', 
      data: ['shorena', 'milk']
 }
+
+console.log(docFour, docThree)
+
+//nums 
+interface Resource <T>{
+    uid: number; 
+    resourceType: number; 
+    data: T;
+}
+
+const docOne: Resource<object>={
+    uid: 1, 
+    resourceType: 1, 
+    data: {name: 'shorena'}
+}
+
+const docTwo: Resource<object>={
+    uid: 10, 
+    resourceType: 2, 
+    data: {name: 'shorena'}
+}
