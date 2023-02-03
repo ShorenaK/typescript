@@ -1,9 +1,22 @@
-// const anchor = document.querySelector('a')!
-// if(anchor){
-// console.log(anchor.href)
-// }
-// console.log(anchor.href)
+// interfaces 
+interface isPerson {
+    name: string;
+    age: number; 
+    speak(a: string): void;
+    spend(a: number): number;
 
+}
+const me: isPerson = {
+    name: 'shorena', 
+    age: 47, 
+    speak(text: string): void{
+        console.log(text)
+    }, 
+     spend(amount: number): number{
+        console.log('I spent', amount)
+        return amount
+     }
+}
 // const form = document.querySelector('form')!;
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
