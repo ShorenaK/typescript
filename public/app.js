@@ -75,3 +75,23 @@ const docFour = {
     data: ['shorena', 'milk']
 };
 console.log(docFour, docThree);
+//nums 
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DERCTOR"] = 3] = "DERCTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
+const docOne11 = {
+    uid: 1,
+    resourceType: ResourceType.BOOK,
+    data: { name: 'shorena' }
+};
+const docTwo11 = {
+    uid: 10,
+    resourceType: ResourceType.FILM,
+    data: { name: 'shorena2' }
+};
+console.log(docOne11, docTwo11);

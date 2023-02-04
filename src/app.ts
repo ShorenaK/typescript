@@ -119,20 +119,34 @@ const docFour: Resource<string[]>={
 console.log(docFour, docThree)
 
 //nums 
-interface Resource <T>{
+
+enum ResourceType {BOOK, AUTHOR, FILM , DERCTOR, PERSON}
+
+interface Resource<T>{
     uid: number; 
-    resourceType: number; 
+    resourceType: ResourceType; 
     data: T;
 }
 
-const docOne: Resource<object>={
+const docOne11: Resource<object> = {
     uid: 1, 
-    resourceType: 1, 
+    resourceType: ResourceType.BOOK, 
     data: {name: 'shorena'}
 }
 
-const docTwo: Resource<object>={
+const docTwo11: Resource<object>={
     uid: 10, 
-    resourceType: 2, 
-    data: {name: 'shorena'}
+    resourceType: ResourceType.FILM, 
+    data: {name: 'shorena2'}
 }
+
+console.log(docOne11, docTwo11)
+
+// tuples. 
+
+let arr = ['ray', 23, true]
+
+arr[0]= false
+
+let tup: [string, number, boolean] = ['rye', 25, true]
+tup[0] = false 
