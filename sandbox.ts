@@ -4,7 +4,7 @@
 // if(anchor){
 // console.log(anchor.href)
 // }
-// console.log(anchor.href)
+
 
 const inputs = document.querySelectorAll('input')
 
