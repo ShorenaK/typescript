@@ -16,16 +16,13 @@ inputs.forEach(input =>{
 // let age = 30 
 let isBlackBelt = false
 
-
 const circ = (diameter: number)=>{
  return diameter * Math.PI;
 }
-
 console.log(circ(7.5))
 
 let names = ['shorena', 'maka', 'teo', 'maria']
 names.push('toad')
-
 
 let character: string; 
 let age: number;
@@ -55,13 +52,9 @@ mixed.push(5)
 mixed.push('mario')
 mixed.push(false)
 
-
-//// 
-
 // let greet: Function; 
 
 let greet: (a:string, b:string)=>void;
-
 
 greet = ()=>{
     console.log('hello, again')
@@ -73,7 +66,6 @@ console.log(c)
 }
 
 add(5, 6, 30)
-
 
 const minus = (a: number, b:number): number =>{
     return a = b 
@@ -97,8 +89,6 @@ console.log(`${item} has a ${uid}`)
 const greetAgain = (uid: StrigOrNum, item: string)=>{
 console.log(`${item} has a ${uid}`)
 }
-
-
 
 greet2('d', 's')
 
